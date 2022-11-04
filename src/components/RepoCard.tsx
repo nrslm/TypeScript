@@ -4,7 +4,6 @@ import { useAppSelector } from '../hooks/redux'
 import { IRepo } from '../models/models'
 
 function RepoCard({ repo }: { repo: IRepo }) {
-
     const { addFavourites, removeFavourites } = useActions()
 
     const { favourites } = useAppSelector(state => state.github)
@@ -24,7 +23,7 @@ function RepoCard({ repo }: { repo: IRepo }) {
     }
 
     return (
-        <div className='border py-3 px-5 rounded mb-2 hover:shadow-md hover:bg-gray-100 transition-all'>
+        <div className='border-black py-3 px-5 rounded mb-2 hover:shadow-md hover:bg-gray-100 transition-all bg-gray-300'>
             <a href={repo.html_url} target="_blank">
                 <h1 className='text-lg font-bold'>
                     {repo.full_name}
